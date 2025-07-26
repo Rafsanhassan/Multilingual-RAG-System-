@@ -116,7 +116,7 @@ From `Evaluation_system_ipnyb.ipynb`:
 
 ### ✅ What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?
 
-We used **PyMuPDF** due to its speed and decent layout preservation. Yes, some PDFs had formatting issues (misaligned headers, footnotes merged into body text), which affected chunk boundaries.
+I used **PyMuPDF** due to its speed and decent layout preservation. Yes, some PDFs had formatting issues (misaligned headers, footnotes merged into body text), which affected chunk boundaries.
 
 ---
 
@@ -128,19 +128,19 @@ We used **PyMuPDF** due to its speed and decent layout preservation. Yes, some P
 
 ### ✅ What embedding model did you use?
 
-We used **`all-MiniLM-L6-v2`** from SentenceTransformers. It's fast, multilingual, and performs well in semantic similarity tasks. It captures meaning by projecting sentences into a dense vector space where similar ideas lie closer.
+I used **`all-MiniLM-L6-v2`** from SentenceTransformers. It's fast, multilingual, and performs well in semantic similarity tasks. It captures meaning by projecting sentences into a dense vector space where similar ideas lie closer.
 
 ---
 
 ### ✅ How are you comparing the query with stored chunks?
 
-We use **cosine similarity** between the query embedding and chunk embeddings. The vector store (FAISS or Pinecone) indexes these for fast retrieval. This method is efficient and effective for dense vector search.
+I use **cosine similarity** between the query embedding and chunk embeddings. The vector store (FAISS or Pinecone) indexes these for fast retrieval. This method is efficient and effective for dense vector search.
 
 ---
 
 ### ✅ How do you ensure meaningful comparisons?
 
-We:
+I:
 
 * Normalize the text (lowercasing, punctuation cleaning)
 * Ensure both query and chunks are embedded using the same model
